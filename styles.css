@@ -488,7 +488,7 @@ input[type="checkbox"]:checked+.task-text {
   }
 
   #mood-selector {
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: center;
   }
   
