@@ -22,6 +22,32 @@ document.addEventListener("DOMContentLoaded", () => {
     "Proud of you!"
   ];
 
+  const moodButtons = document.querySelectorAll(".mood-btn");
+
+  // Load saved mood from storage and highlight it
+  chrome.storage.local.get("userMood", (data) => {
+    if (data.userMood) {
+      document
+        .querySelector(`.mood-btn[data-mood="${data.userMood}"]`)
+        ?.classList.add("selected");
+    }
+  });
+
+  // Add click events to mood buttons
+  moodButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const selectedMood = btn.dataset.mood;
+
+      // Save to Chrome storage
+      chrome.storage.local.set({ userMood: selectedMood });
+
+      // Highlight the selected mood
+      moodButtons.forEach((b) => b.classList.remove("selected"));
+      btn.classList.add("selected");
+    });
+  });
+
+
   function showEncouragement() {
     const msg = encouragements[Math.floor(Math.random() * encouragements.length)];
     speechBubble.textContent = msg;

@@ -486,6 +486,35 @@ input[type="checkbox"]:checked+.task-text {
     border-style: solid;
     border-color: white transparent transparent transparent;
   }
+
+  #mood-selector {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .mood-label {
+    font-size: 16px;
+    margin-right: 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .mood-btn {
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0 6px;
+    transition: transform 0.2s ease;
+  }
+  
+  .mood-btn:hover {
+    transform: scale(1.3);
+  }
+  
+  .mood-btn.selected {
+    outline: 2px solid #666;
+    border-radius: 50%;
+  }
   
   .hidden {
     display: none;
