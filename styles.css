@@ -460,6 +460,49 @@ input[type="checkbox"]:checked+.task-text {
     height: 500px;
 }
 
+#deer-bubble-anchor {
+    position: absolute;
+    top: 150px; /* Adjust as needed to match your layout */
+    left: 80px;
+    z-index: 1000;
+  }
+  
+  #speech-bubble {
+    background-color: white;
+    padding: 10px 14px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    white-space: nowrap;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  #speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
 .deer-circle.active {
     opacity: 1;
 }

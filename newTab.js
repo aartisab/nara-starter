@@ -11,6 +11,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const resetYesButton = document.getElementById("reset-yes");
   const resetNoButton = document.getElementById("reset-no");
 
+  const speechBubble = document.getElementById("speech-bubble");
+
+  const encouragements = [
+    "Great job!",
+    "You’re making progress!",
+    "Keep going!",
+    "Nice work!",
+    "You did it!",
+    "Proud of you!"
+  ];
+
+  function showEncouragement() {
+    const msg = encouragements[Math.floor(Math.random() * encouragements.length)];
+    speechBubble.textContent = msg;
+    speechBubble.classList.remove("hidden");
+
+    setTimeout(() => {
+      speechBubble.classList.add("hidden");
+    }, 3000);
+  }
+
+
   // for controlling when hovers are active
   let hoverListeners = [];
 
@@ -669,6 +691,7 @@ document.addEventListener("DOMContentLoaded", () => {
       checkbox.addEventListener("change", () => {
         const originalIndex = tasks.indexOf(task);
         tasks[originalIndex].completed = checkbox.checked;
+        if (checkbox.checked) showEncouragement();
 
         if (tasks[originalIndex].completed) {
           const deleteButton = taskItem.querySelector(".delete-task");
