@@ -462,7 +462,7 @@ input[type="checkbox"]:checked+.task-text {
 
 #deer-bubble-anchor {
     position: absolute;
-    top: 200px;
+    top: 400px;
     left: 1000px;
     z-index: 1000;
   }
