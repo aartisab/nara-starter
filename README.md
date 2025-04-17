@@ -2,9 +2,9 @@
 
 ## Enhancements
 
-Speech Bubble Encouragement
+Speech Bubble Encouragement - Whenever a user checks off a task, a cheerful speech bubble appears near the deer character with a short, uplifting message like “Great job!”, “Keep going!”, or “You’re making progress!”. This feature is designed to create a more emotionally supportive and rewarding experience as users complete their daily goals, reinforcing positive habits through gentle visual feedback.
 
-Mood Selection Prompt
+Mood Selection Prompt - At the start of each session, users are invited to log how they're feeling by selecting from five mood options: happy, neutral, stressed, sad, or mad — each represented by a simple emoji. This quick emotional check-in helps users reflect on their mental state and encourages mindfulness as part of their daily routine. The selected mood is visually highlighted and stored locally for a more personalized experience.
 
 ## Overview
 
